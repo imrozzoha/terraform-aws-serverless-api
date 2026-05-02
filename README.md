@@ -215,10 +215,10 @@ See [examples/contact-form/lambda/handler.py](examples/contact-form/lambda/handl
 
 This module is used in production by [imrozzoha.com](https://imrozzoha.com) — a personal portfolio site where:
 
-- **`/contact`** — routes form submissions through SES to `imrozzoha@imrozzoha.com`
+- **`/contact`** — routes form submissions through SES to the site owner's email
 - **`/chat`** — routes AI chat messages to a Bedrock-connected agent Lambda
 
-Both endpoints share a single API Gateway with 5 rps / burst 20 throttling, IAM least-privilege roles, and CORS locked to `https://imrozzoha.com`.
+Both endpoints share a single API Gateway with 5 rps / burst 20 throttling, IAM least-privilege roles, and CORS locked to the production domain.
 
 ---
 
